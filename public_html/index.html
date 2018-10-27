@@ -1,0 +1,81 @@
+﻿<!--
+    Demo project for "Instituto Distrital de Patrimonio Cultural"
+    @author henry.monroy
+-->
+<!DOCTYPE html>
+<html ng-app="RGESE">
+
+    <head>    
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>RGESE</title>
+        <!--<link rel="icon" href="favicon.ico">-->
+        
+        <!-- Styles -->
+        <link href="assets/angular/angular-loading-bar/loading-bar.css" rel="stylesheet" />
+        <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css" />   
+
+        <!-- Scripts AngularJS -->
+        <script src="assets/angular/angular/angular.js"></script>
+        <script src="assets/angular/angular-route/angular-route.js"></script>
+        <script src="assets/angular/angular-resource/angular-resource.js"></script>
+        <script src="assets/angular/angular-animate/angular-animate.js"></script>
+        <script src="assets/angular/angular-loading-bar/loading-bar.js"></script>
+        
+        <!-- Scripts Bootstrap -->
+        <script src="assets/lib/jquery-3.2.1.min.js"></script>    
+        <script src="assets/lib/bootstrap.js"></script>
+        
+        <!-- services -->
+        <script src="services/ATP_services.js"></script>
+        
+        <!--Controllers of views-->
+        <script src="app.js"></script>
+        <script src="home/home.js"></script>
+
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="60">
+        <div ng-controller="rootCtrl"> 
+
+            <nav class="navbar navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="">
+                            <img class="logo" src="http://www.bogota.gov.co/especiales-bogota/images/bogota_mejor_para_todos.png" alt="Sociedad Portuaria de Buenaventura">
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#!home" data-target="#home">HOME</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="header">
+            </nav>
+            
+            <div ng-view></div>
+
+
+<!--            <footer class="footer">
+                <div class="text-center center-block">
+                    <a href="https://www.facebook.com/PuertoSPB/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                    <a href="https://twitter.com/Puerto_SPB"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                    <a href="https://plus.google.com"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+                    <a href="mailto:spb@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+                    <p class="txt-railway"> Sociedad Portuaria Regional de Buenaventura S.A </p>
+                    <p class="txt-railway"> Avenida Portuaria – Edificio Administración, P.B.X. (092) 2410700 – 709 </p>
+
+                </div>
+            </footer>-->
+        </div>
+    </body>
+</html>
