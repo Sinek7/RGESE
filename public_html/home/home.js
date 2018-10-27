@@ -25,13 +25,18 @@ angular.module("RGESE.home", ['ngRoute'])
                  * 1. Declaracion de variables
                  * 2. Funcionalidad
                  * 3. Consumo de servicios REST
+                 * 4. ...
                  */
+                $scope.lista=[{"id":0, "name":"henry"},
+                    {"id":1, "name":"Diego"}];
                 
                 $scope.test="Hola mundo";
                 
                 
                 $scope.functionTest=function(){
                     $scope.test=$scope.variableDiego;
+                    
+                    console.log("valor variable idLista en ng-model "+JSON.stringify($scope.idLista));
                 };
             }]);
 

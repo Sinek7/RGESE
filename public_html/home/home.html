@@ -24,8 +24,12 @@ and open the template in the editor.
 
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label>Telefono</label>
-                            <input type="text" class="form-control" placeholder="Teléfono">                            
+                            <label>Lista nombres</label>
+                            <select class="form-control" required="true" ng-options="item as item.name for item in lista track by item.id" ng-model="idLista">
+                                <option style="display:none" value="" class="ng-binding">
+                                    Seleccione tipo de identificación
+                                </option>
+                            </select>                        
                         </div>
                     </div>
 
@@ -33,7 +37,7 @@ and open the template in the editor.
                         <div class="form-group">
                             <label>Mail</label>
                             <input type="text" class="form-control" placeholder="Mail">
-                            
+
                         </div>
                     </div>
                 </form>

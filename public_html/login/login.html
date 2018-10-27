@@ -1,0 +1,64 @@
+﻿<!--
+    login view
+    @author henry.monroy
+-->
+<div data-ng-init="">
+    <div class="jumbotron text-center">
+        <h1>Agendamiento de trámites</h1>
+        <h3>Ingresar</h3>        
+    </div>
+
+    <section name="userData">
+        <div class="container-fluid">
+            <form name="userForm">
+                <div class="panel panel-default">
+                    <div class="panel-body">                        
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Persona</label>
+                                <select class="form-control" required="true" ng-options="item as item.name for item in parameters.typeOfPerson track by item.id" ng-model="typePerson">
+                                    <option style="display:none" value="" class="ng-binding">
+                                        Seleccione tipo de persona
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <section name="userInfo">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Tipo de identificación</label>
+                                    <select class="form-control" required="true" ng-options="item as item.name for item in parameters.typeOfPersonId track by item.id" ng-model="typePersonId">
+                                        <option style="display:none" value="" class="ng-binding">
+                                            Seleccione tipo de identificación
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Número de Documento</label>
+                                    <input type="text" class="form-control" placeholder="Ingrese número de documento" ng-model="person.personId" required />
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Tipo de servicio</label>
+                                    <select class="form-control" required="true" ng-options="item as item.name for item in parameters.typeOfService track by item.id" ng-model="typeService">
+                                        <option style="display:none" value="" class="ng-binding">
+                                            Seleccione tipo de identificación
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </section>                        
+                    </div>
+                    <div class="panel-footer text-center">
+                        <button type="button" class="btn btn-primary btn-lg" ng-disabled="userForm.$invalid" ng-click="login()">
+                            <span class="glyphicon glyphicon-log-in"></span>  Ingresar
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
