@@ -16,8 +16,9 @@
         <!-- Styles -->
         <link href="assets/angular/angular-loading-bar/loading-bar.css" rel="stylesheet" />
         <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="assets/css/style.css" rel="stylesheet" type="text/css" />   
-
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+        
+        
         <!-- Scripts AngularJS -->
         <script src="assets/angular/angular/angular.js"></script>
         <script src="assets/angular/angular-route/angular-route.js"></script>
@@ -25,9 +26,11 @@
         <script src="assets/angular/angular-animate/angular-animate.js"></script>
         <script src="assets/angular/angular-loading-bar/loading-bar.js"></script>
         
+        
         <!-- Scripts Bootstrap -->
-        <script src="assets/lib/jquery-3.2.1.min.js"></script>    
+        <script src="assets/lib/jquery-3.2.1.min.js"></script>   
         <script src="assets/lib/bootstrap.js"></script>
+
         
         <!-- services -->
         <script src="services/ATP_services.js"></script>
@@ -35,13 +38,10 @@
         <!--Controllers of views-->
         <script src="app.js"></script>
         <script src="home/home.js"></script>
-        <script src="prueba/prueba.js"></script>
-
+        <script src="primerContacto/primerContacto.js"></script>
     </head>
-
     <body data-spy="scroll" data-target=".navbar" data-offset="60">
         <div ng-controller="rootCtrl"> 
-
             <nav class="navbar navbar-fixed-top">
                 <div class="container-fluid">
                     <div class="navbar-header">
@@ -57,7 +57,7 @@
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#!home" data-target="#home">HOME</a></li>
-                            <li><a href="#!prueba" data-target="#prueba">PRUEBA</a></li>
+                            <li><a href="#!primerContacto" data-target="#primerContacto">PRIMER CONTACTO</a></li>
                         </ul>
                     </div>
                 </div>
@@ -65,8 +65,6 @@
             </nav>
             
             <div ng-view></div>
-
-
 <!--            <footer class="footer">
                 <div class="text-center center-block">
                     <a href="https://www.facebook.com/PuertoSPB/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
@@ -75,7 +73,6 @@
                     <a href="mailto:spb@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
                     <p class="txt-railway"> Sociedad Portuaria Regional de Buenaventura S.A </p>
                     <p class="txt-railway"> Avenida Portuaria – Edificio Administración, P.B.X. (092) 2410700 – 709 </p>
-
                 </div>
             </footer>-->
         </div>

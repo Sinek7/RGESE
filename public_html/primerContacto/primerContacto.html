@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div data-ng-init="">
+    <div class="jumbotron text-center">
+        <h1>Primer Contacto</h1>        
+    </div>
+    <div class="container-fluid">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form name="homeForm">
+                    <div class="text-center">
+                        <h3>Agenda</h3>  
+                    </div>
+                    <div class="col-md-12">
+                        <table class="table table-striped table-bordered table-hover table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>Número de contacto</th>
+                                    <th>Fecha cita</th>
+                                    <th>Hora cita</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="comment">Observaciones:</label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                    </div>
+                    <div class="col-md-12   ">
+                        <label>El ciudadano cumplio el agendamiento</label>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" checked>Sí</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio">No</label>
+                        </div>
+                        <div class="panel-footer text-center">
+                            <button type="button" class="btn btn-primary btn-lg">Actualizar
+                            </button>
+                        </div>
+                    </div>         
+                </form>
+            </div>
+        </div>
+    </div>  
+</div>

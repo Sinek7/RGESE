@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 'use strict';
-angular.module("RGESE.prueba", ['ngRoute'])
+angular.module("RGESE.primerContacto", ['ngRoute'])
 
         .config(['$routeProvider', function ($routeProvider) {
-                $routeProvider.when('/prueba', {
-                    templateUrl: 'prueba/prueba.html',
-                    controller: 'pruebaCtrl'
+                $routeProvider.when('/primerContacto', {
+                    templateUrl: 'primerContacto/primerContacto.html',
+                    controller: 'primerContactoCtrl'
                 });
             }])
         .config(function (cfpLoadingBarProvider) {
@@ -17,7 +17,7 @@ angular.module("RGESE.prueba", ['ngRoute'])
             cfpLoadingBarProvider.includeBar = true;
         })
 
-        .controller("pruebaCtrl", ['$scope',
+        .controller("primerConactoCtrl", ['$scope',
             function ($scope, cfpLoadingBar) {
                 /**
                  * Aquí va toda la logica de la vista:
@@ -26,12 +26,10 @@ angular.module("RGESE.prueba", ['ngRoute'])
                  * 2. Funcionalidad
                  * 3. Consumo de servicios REST
                  */
-                
-                $scope.test="Hola mundo";
-                
-                
-                $scope.functionTest=function(){
-                    $scope.test=$scope.variableDiego;
+
+                $scope.test = "Hola mundo";
+                $scope.functionTest = function () {
+                    $scope.test = $scope.variableDiego;
                 };
             }]);
 
