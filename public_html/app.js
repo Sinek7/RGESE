@@ -9,7 +9,8 @@ angular.module("RGESE", [
     'angular-loading-bar',
     'ngAnimate',
     'services.ATP_services',
-    'RGESE.home'
+    'RGESE.home',
+    'RGESE.prueba'
 ])
     
     .config(['$routeProvider', function ($routeProvider) {
