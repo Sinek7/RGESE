@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div data-ng-init="">
+    <div class="jumbotron text-center">
+        <h1>Verificación agenda programada</h1>
+    </div>
+
+    <div class="container-fluid">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form name="formVerificacionCita">
+                    <section name="seccionVerificarCita">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Número de documento</label>
+                                <input type="text" class="form-control" placeholder="Digite su número de documento" ng-model="idCiudadano">                            
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <div class="form-group">
+                                <input type="button" value="Verificar agenda" class="btn btn-primary btn-lg" ng-click="verificarAgenda(idCiudadano)">                            
+                            </div>
+                        </div>
+                    </section>
+
+                    <section name="seccionProgramarCita" ng-show="seccion2">
+                        <div class="col-md-12 text-center">
+                            <h3 class="text-danger">El ciudadano no tiene cita programada</h3>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="">
+                                <span class="glyphicon glyphicon-time"></span>  Programar cita
+                            </button>
+                        </div> 
+                    </section>
+
+                    <section name="seccionCancelarCita" ng-show="seccion1">
+                        <div class="col-md-12">
+                            <div class="panel-default">
+                                <h3>Información de la cita</h3>
+                                <div class="panel-body">                                    
+                                    <div class="col-md-12">
+                                        <label>Fecha y hora</label>
+                                        <input type="text" class="form-control" value="{{cita.fecha}} {{cita.franja}}" disabled>  
+                                    </div>                                                                      
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <button type="button" class="btn btn-warning btn-lg" ng-click="">
+                                <span class="glyphicon glyphicon-remove-circle"></span>  Cancelar cita
+                            </button>
+                        </div>
+                    </section>
+                </form>
+            </div>         
+        </div>
+    </div>
+</div>
