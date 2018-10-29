@@ -16,31 +16,28 @@
         <!-- Styles -->
         <link href="assets/angular/angular-loading-bar/loading-bar.css" rel="stylesheet" />
         <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-        
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css" />        
         
         <!-- Scripts AngularJS -->
         <script src="assets/angular/angular/angular.js"></script>
         <script src="assets/angular/angular-route/angular-route.js"></script>
         <script src="assets/angular/angular-resource/angular-resource.js"></script>
         <script src="assets/angular/angular-animate/angular-animate.js"></script>
-        <script src="assets/angular/angular-loading-bar/loading-bar.js"></script>
-        
+        <script src="assets/angular/angular-loading-bar/loading-bar.js"></script>        
         
         <!-- Scripts Bootstrap -->
         <script src="assets/lib/jquery-3.2.1.min.js"></script>   
         <script src="assets/lib/bootstrap.js"></script>
-
         
-        <!-- services -->
+        <!-- Factories -->
         <script src="services/ATP_services.js"></script>
         
         <!--Controllers of views-->
         <script src="app.js"></script>
-        <script src="verificarCitaCiudadano/verificarCitaCiudadano.js"></script>
-        <script src="solicitarCita/solicitarCita.js"></script>
+        <script src="vwSolicitarCita/solicitarCita.js"></script>
         <script src="primerContacto/primerContacto.js"></script>
     </head>
+    
     <body data-spy="scroll" data-target=".navbar" data-offset="60">
         <div ng-controller="rootCtrl"> 
             <nav class="navbar navbar-fixed-top">
@@ -52,12 +49,11 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" href="">
-                            <img class="logo" src="http://www.bogota.gov.co/especiales-bogota/images/bogota_mejor_para_todos.png" alt="Sociedad Portuaria de Buenaventura">
+                            <img class="logo" src="http://www.bogota.gov.co/especiales-bogota/images/bogota_mejor_para_todos.png">
                         </a>
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#!verificarCitaCiudadano" data-target="#verificarCitaCiudadano">VERIFICAR CITA</a></li>
                             <li><a href="#!solicitarCita" data-target="#solicitarCita">SOLICITAR CITA</a></li>
                             <li><a href="#!primerContacto" data-target="#primerContacto">PRIMER CONTACTO</a></li>
                         </ul>

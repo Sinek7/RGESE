@@ -17,7 +17,7 @@ angular.module("RGESE.primerContacto", ['ngRoute'])
             cfpLoadingBarProvider.includeBar = true;
         })
 
-        .controller("primerConactoCtrl", ['$scope',
+        .controller("primerContactoCtrl", ['$scope',
             function ($scope, cfpLoadingBar) {
                 /**
                  * Aquí va toda la logica de la vista:

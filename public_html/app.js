@@ -9,12 +9,11 @@ angular.module("RGESE", [
     'angular-loading-bar',
     'ngAnimate',
     'services.ATP_services',
-    'RGESE.verificarCitaCiudadano',
     'RGESE.solicitarCita',
     'RGESE.primerContacto'
 ])
     .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.otherwise({ redirectTo: '/verificarCitaCiudadano' });
+        $routeProvider.otherwise({ redirectTo: '/solicitarCita'});
     }])
 
     .config(function (cfpLoadingBarProvider) {

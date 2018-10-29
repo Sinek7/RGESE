@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div data-ng-init="">
+    <div class="jumbotron text-center">
+        <h1>Solicitud de cita</h1>
+    </div>
+
+    <div class="container-fluid">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <section name="seccionConsultarCiudadano">
+                    <form name="formConsultarCiudadano">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Buscar </span>                                    
+                                    <input type="text" class="form-control" required="true" placeholder="Digite su número de documento" ng-model="idCiudadano">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-danger" ng-click="limpiar()">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="text-warning">¿Es usted víctima del conflicto armado y cuenta con RUV?</p>
+                            <label class="radio-inline"><input type="radio" name="optradio" checked>Si</label>
+                            <label class="radio-inline"><input type="radio" name="optradio">No</label>
+                        </div>
+                    </form>
+                    <div class="col-md-12 text-center">
+                        <div class="form-group">
+                            <input type="button" value="Consultar" class="btn btn-primary btn-lg" ng-disabled="formConsultarCiudadano.$invalid || seccion1 || seccion2" ng-click="consultarCiudadano()">                            
+                        </div>
+                    </div>
+                </section>
+
+                <section name="seccionProgramarCita" ng-show="seccion2">
+                    <div class="col-md-12 text-center">
+                        <h3 class="text-warning">Usted no tiene cita programada</h3>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-warning btn-lg btn-block" data-toggle="collapse" data-target="#programarCita">
+                            Programar cita
+                        </button>                            
+                        <div id="programarCita" class="collapse">
+                            <form name="formInfoCita">
+                                <br>
+                                <h4 class="text-primary">Información de la cita:</h4>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Número de celular</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">(+57)</span>                                    
+                                            <input type="tel" class="form-control" required="true" placeholder="Ingrese su número de celular..." ng-model="celular">                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Fecha</label>
+                                        <input type="date" class="form-control" required="true" ng-model="fechaCita">  
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Hora</label>
+                                        <select class="form-control" required="true" ng-options="item as item.franja for item in parametros.franjas track by item.id" ng-model="horaCita">
+                                            <option style="display:none" value="" class="ng-binding">
+                                                Elija una franja...
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>CLAV</label>
+                                        <select class="form-control" required="true" ng-options="item as item.nombre for item in parametros.clavs track by item.id" ng-model="clav">
+                                            <option style="display:none" value="" class="ng-binding">
+                                                Seleccione CLAV...
+                                            </option>
+                                        </select> 
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="col-md-12 text-center">
+                                <br>
+                                <button type="button" class="btn btn-primary btn-lg" ng-disabled="formInfoCita.$invalid" ng-click="agendarCita()">
+                                    <span class="glyphicon glyphicon-time"></span>  Agendar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section name="seccionCancelarCita" ng-show="seccion1">
+                    <div class="col-md-12">
+                        <div class="panel-default">
+                            <h3>Información de la cita</h3>
+                            <div class="panel-body">                                    
+                                <div class="col-md-12">
+                                    <label>Fecha y hora</label>
+                                    <input type="text" class="form-control" value="{{cita.fecha}} {{cita.franja}}" disabled>  
+                                </div>                                                                      
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <button type="button" class="btn btn-danger btn-lg" ng-click="cancelarCita()">
+                            Cancelar cita
+                        </button>
+                    </div>
+                </section>
+
+                <section name="seccionCiudadanoNoRegistrado" ng-show="seccion3">
+                    <div class="col-md-12 text-center">
+                        <h3 class="text-danger">Debe estar inscrito en el registro único de víctimas RUV</h3>
+                    </div>
+                </section>
+            </div>         
+        </div>
+    </div>
+</div>
