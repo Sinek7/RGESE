@@ -9,13 +9,19 @@ angular.module("RGESE", [
     'angular-loading-bar',
     'ngAnimate',
     'services.ATP_services',
+<<<<<<< HEAD
     'RGESE.home',
     'RGESE.HU03_primerContacto',
     'RGESE.HU04_agendamientoSegundoContacto'
     
+=======
+    'RGESE.verificarCitaCiudadano',
+    'RGESE.solicitarCita',
+    'RGESE.primerContacto'
+>>>>>>> 6968bfd2eece09c3aa2e067abb29aa30150bc35f
 ])
     .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.otherwise({ redirectTo: '/home' });
+        $routeProvider.otherwise({ redirectTo: '/verificarCitaCiudadano' });
     }])
 
     .config(function (cfpLoadingBarProvider) {

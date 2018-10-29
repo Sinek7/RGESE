@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div data-ng-init="">
+    <div class="jumbotron text-center">
+        <h1>Solicitar cita</h1> 
+    </div>
+
+    <div class="container-fluid">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form name="formSolicitarCita">
+                    <section name="seccionConsultarCiudadano">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Número de identificación</label>
+                                <input type="text" class="form-control" placeholder="Digite su número de documento">                            
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <div class="form-group">
+                                <input type="button" value="Consultar" class="btn btn-success btn-lg" ng-click="">                            
+                            </div>
+                        </div>
+                    </section>
+
+                    <section name="seccionProgramarCita">
+                        <div class="col-md-12">
+                            <div class="panel-default">
+                                <h3>Programar cita</h3>
+                                <div class="panel-body">
+                                    <div class="col-md-6">
+                                        <label>Fecha</label>
+                                        <input type="date" class="form-control">  
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Hora</label>
+                                        <select class="form-control" required="true" ng-options="item as item.franja for item in parametros.franjas track by item.id" ng-model="franjaHoraria">
+                                            <option style="display:none" value="" class="ng-binding">
+                                                Elija una franja horaria...
+                                            </option>
+                                        </select>  
+                                    </div>                                                                      
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <button type="button" class="btn btn-primary btn-lg" ng-click="">
+                                <span class="glyphicon glyphicon-time"></span>  Programar cita
+                            </button>
+                        </div>  
+                    </section>
+                    
+                    <section name="ciudadanoNoRegistrado">
+                        
+                    </section>
+
+                </form>
+            </div>         
+        </div>
+    </div>
+</div>
