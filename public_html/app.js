@@ -8,9 +8,11 @@ angular.module("RGESE", [
     'ngResource',
     'angular-loading-bar',
     'ngAnimate',
-    'services.ATP_services',
+    'services.ATP_services',    
     'RGESE.solicitarCita',
-    'RGESE.primerContacto'
+    'RGESE.primerContacto',
+    'RGESE.agendamientoSegundoContacto'
+
 ])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({ redirectTo: '/solicitarCita'});

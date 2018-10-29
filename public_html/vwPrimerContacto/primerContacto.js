@@ -8,14 +8,14 @@ angular.module("RGESE.primerContacto", ['ngRoute'])
 
         .config(['$routeProvider', function ($routeProvider) {
                 $routeProvider.when('/primerContacto', {
-                    templateUrl: 'primerContacto/primerContacto.html',
+                    templateUrl: 'vwPrimerContacto/primerContacto.html',
                     controller: 'primerContactoCtrl'
                 });
             }])
         .config(function (cfpLoadingBarProvider) {
             cfpLoadingBarProvider.includeSpinner = true;
             cfpLoadingBarProvider.includeBar = true;
-        })
+        })        
 
         .controller("primerContactoCtrl", ['$scope',
             function ($scope, cfpLoadingBar) {
