@@ -10,7 +10,9 @@ angular.module("RGESE", [
     'ngAnimate',
     'services.ATP_services',
     'RGESE.home',
-    'RGESE.primerContacto'
+    'RGESE.HU03_primerContacto',
+    'RGESE.HU04_agendamientoSegundoContacto'
+    
 ])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({ redirectTo: '/home' });

@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 'use strict';
-angular.module("RGESE.primerContacto", ['ngRoute'])
+angular.module("RGESE.HU03_primerContacto", ['ngRoute'])
 
         .config(['$routeProvider', function ($routeProvider) {
-                $routeProvider.when('/primerContacto', {
-                    templateUrl: 'primerContacto/primerContacto.html',
-                    controller: 'primerContactoCtrl'
+                $routeProvider.when('/HU03_primerContacto', {
+                    templateUrl: 'HU03_primerContacto/HU03_primerContacto.html',
+                    controller: 'HU03_primerContactoCtrl'
                 });
             }])
         .config(function (cfpLoadingBarProvider) {
@@ -17,7 +17,7 @@ angular.module("RGESE.primerContacto", ['ngRoute'])
             cfpLoadingBarProvider.includeBar = true;
         })
 
-        .controller("primerConactoCtrl", ['$scope',
+        .controller("HU03_primerContacto", ['$scope',
             function ($scope, cfpLoadingBar) {
                 /**
                  * Aquí va toda la logica de la vista:
